@@ -14,7 +14,9 @@ def main():
     api_key = os.getenv('GEMINI_API_KEY')
     if not api_key:
         raise ValueError("GEMINI_API_KEY not found in .env file")
-
+    
+    print(api_key)
+    
     # Gemini 모델 초기화
     llm = ChatGoogleGenerativeAI(
         model="gemini-1.5-pro",
